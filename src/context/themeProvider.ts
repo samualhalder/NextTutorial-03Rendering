@@ -15,8 +15,8 @@ export const defaultTheme: Theme = {
   },
 };
 
-const ThemeContext = createContext<Theme>(defaultTheme);
+export const ThemeContext = createContext<Theme>(defaultTheme);
+export const ThemeProvider=ThemeContext.Provider
 
-export const ThemeProvider= ThemeContext.Provider
 const useTheme = () => useContext(ThemeContext);
 export default useTheme

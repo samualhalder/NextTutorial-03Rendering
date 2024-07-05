@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { defaultTheme, ThemeProvider } from "@/components/themeProvider";
-import { useState } from "react";
+import { defaultTheme, ThemeProvider } from "@/context/themeProvider";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ThemeProvider value={defaultTheme}>
-        <body className={inter.className}>{children}</body>
-      </ThemeProvider>
+      <body className={inter.className}>
+        <ThemeProvider value={defaultTheme}>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }

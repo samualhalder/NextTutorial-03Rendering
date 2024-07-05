@@ -1,18 +1,10 @@
-import { useTheme } from "@/components/themeProvider";
+"use client";
+
+import { log } from "console";
 import React from "react";
 
 function About() {
-  const theme = useTheme();
-  return (
-    <div
-      className=""
-      style={{
-        backgroundColor: theme.colors.primary,
-      }}
-    >
-      About {new Date().toLocaleString()}
-    </div>
-  );
+  return <div className="">About </div>;
 }
 
 export default About;
